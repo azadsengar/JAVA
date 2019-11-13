@@ -1,1 +1,152 @@
+Static keyword can be used with class, variable, method and block. Static members belong to the class instead of a specific instance, this means if you make a member static, you can access it without object. Let’s take an example to understand this:
+
+
+class SimpleStaticExample
+{
+    // This is a static method
+    static void myMethod()
+    {
+        System.out.println("myMethod");
+    }
+ 
+    public static void main(String[] args)
+    {
+          /* You can see that we are calling this
+           * method without creating any object. 
+           */
+           myMethod();
+    }
+}
+
+OUTPUT:-
+myMethod
+******************************************************************************************************************************************
+
+                                                STATIC BLOCK
+                                                
+Static block is used for initializing the static variables.This block gets executed when the class is loaded in the memory. A class can have multiple Static blocks, which will execute in the same sequence in which they have been written into the program.
+
+class JavaExample{
+   static int num;
+   static String mystr;
+   
+   static{
+      num = 97;
+      mystr = "Static keyword in Java";
+   }
+   
+   public static void main(String args[])
+   {
+      System.out.println("Value of num: "+num);
+      System.out.println("Value of mystr: "+mystr);
+   }
+}
+Output:
+
+Value of num: 97
+Value of mystr: Static keyword in Java
+****************************************************************************************************************************************
+
+                                              MULTIPLE STATIC BLOCK
+                                              
+Lets see how multiple static blocks work in Java. They execute in the given order which means the first static block executes before second static block. That’s the reason, values initialized by first block are overwritten by second block.
+
+class JavaExample2{
+   static int num;
+   static String mystr;
+   //First Static block
+   
+   
+   static{
+      System.out.println("Static Block 1");
+      num = 68;
+      mystr = "Block1";
+  } 
+  
+  
+  //Second static block
+  static{
+      System.out.println("Static Block 2");
+      num = 98;
+      mystr = "Block2";
+  }
+  
+  
+  public static void main(String args[])
+  {
+      System.out.println("Value of num: "+num);
+      System.out.println("Value of mystr: "+mystr);
+   }
+}
+Output:
+
+Static Block 1
+Static Block 2
+Value of num: 98
+Value of mystr: Block2
+****************************************************************************************************************************************
+
+                                                    JAVA STATIC VARIABLES
+                                                  
+A static variable is common to all the instances (or objects) of the class because it is a class level variable. In other words you can say that only a single copy of static variable is created and shared among all the instances of the class. Memory allocation for such variables only happens once when the class is loaded in the memory.
+Few Important Points:
+
+Static variables are also known as Class Variables.
+Unlike non-static variables, such variables can be accessed directly in static and non-static methods.
+
+
+
+class JavaExample3{
+  static int var1;
+  static String var2;
+  //This is a Static Method
+  
+  
+  static void disp(){
+      System.out.println("Var1 is: "+var1);
+      System.out.println("Var2 is: "+var2);
+  }
+  
+  public static void main(String args[]) 
+  {
+      disp();
+  }
+}
+
+Output:
+
+Var1 is: 0
+Var2 is: null
+****************************************************************************************************************************************
+
+                                          STATIC METHOD MAIN CAN ACCESS STATIC VARIABLE WITHOUT THE OBJECT
+  class JavaExample{
+   static int i = 10;
+   static String s = "Beginnersbook";
+   //This is a static method
+   
+   public static void main(String args[]) 
+   {
+       System.out.println("i:"+i);
+       System.out.println("s:"+s);
+   }
+}
+
+Output:
+
+i:10
+s:Beginnersbook 
+****************************************************************************************************************************************
+
+                                          
+                                          
+                                          
+                                          
+                                          
+                                          
+                                          
+                                          
+                                          
+                                          
+                                          
 
