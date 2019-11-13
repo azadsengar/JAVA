@@ -1,1 +1,89 @@
+                                          CODE FOR NESTED IF
+                                          
+public class NestedIfExample {
 
+   public static void main(String args[]){
+        int num=70;
+	if( num < 100 ){ 
+           System.out.println("number is less than 100"); 
+           if(num > 50){
+	      System.out.println("number is greater than 50");
+	   }
+	}
+   }
+}
+
+OUTPUT:
+number is less than 100
+number is greater than 50
+******************************************************************************************************************************************
+
+                                        CODE FOR IF-ELSE 
+                                        
+if(condition) {
+   Statement(s);
+}
+else {
+   Statement(s);
+}
+*****************************************************************************************************************************************
+
+                                        CODE FOR IF-ELSE-IF
+                                        
+public class IfElseIfExample {
+
+   public static void main(String args[]){
+	int num=1234;
+	if(num <100 && num>=1) {
+	  System.out.println("Its a two digit number");
+	}
+	else if(num <1000 && num>=100) {
+	  System.out.println("Its a three digit number");
+	}
+	else if(num <10000 && num>=1000) {
+	  System.out.println("Its a four digit number");
+	}
+	else if(num <100000 && num>=10000) {
+	  System.out.println("Its a five digit number");			
+	}
+	else {
+	  System.out.println("number is not between 1 & 99999");			
+	}
+   }
+}
+
+
+OUTPUT:
+Its a four digit number
+****************************************************************************************************************************************
+
+                                        CODE FOR SWITCH CASE
+   
+ public class SwitchCaseExample2 {
+
+   public static void main(String args[]){
+      int i=2;
+      switch(i)
+      {
+	 case 1:
+	   System.out.println("Case1 ");
+	   break;
+	 case 2:
+	   System.out.println("Case2 ");
+	   break;
+	 case 3:
+	   System.out.println("Case3 ");
+	   break;
+	 case 4:
+           System.out.println("Case4 ");
+           break;
+	 default:
+	   System.out.println("Default ");
+      }
+   }
+}
+
+
+OUTPUT:
+Case2
+****************************************************************************************************************************************
