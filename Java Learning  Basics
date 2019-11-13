@@ -10,7 +10,7 @@ Java Virtual Machine (JVM) is a virtual machine that resides in the real machine
 So, now we understood that the primary function of JVM is to execute the byte code produced by compiler. Each operating system has different JVM, however the output they produce after execution of byte code is same across all operating systems. Which means that the byte code generated on Windows can be run on Mac OS and vice versa. That is why we call java as platform independent language.
 ******************************************************************************************************************************************
 
-DATA VARIABLES IN JAVA:-
+							DATA VARIABLES IN JAVA:-
 
 There are three types of Variables in Java and they are:-
 
@@ -99,4 +99,60 @@ public class VariableExample {
    }
 }
 ******************************************************************************************************************************************
+
+							DATA TYPES IN JAVA
+
+There are following Data types that we use in java and they are:-
+
+1.) byte, short, int, long -->  forstoring Whole Numbers.
+2.) Float and Double-->  are used to store the fractional values.
+3.) char-->  are used to store the Characters.
+4.) Boolean-->  to hold True or False values.
+
+BYTE  -   This can hold whole number between -128 and 127.
+SHORT -   This can hold whole number between  -32,768 to 32767
+INT   -   This can hold whole number between -2,147,483,648 to 2,147,483,647
+LONG  -   This can hold whole number between 9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.
+
+*******************************************************************************************************************************************
+						OPERATORS IN JAVA
+1.) BASIC ARITHMETIC OPERATORS:-
+   +  for "Addition"
+   -  for "subtraction"
+   *  for "multiplication'
+   %  for "modulo"  -->  means for getting remainder
+   
+2.) ASSIGNMENT OPERATORS:-
+   =, +=, -=, *=, /=, %=  etc. just see them once.
+   
+3.) AUTO INCREMENT and DECREMENT OPERATORS:-
+   ++, --
+
+4.) LOGICAL OPERATORS:-
+   &&, ||,  !
+   
+5.) COMPARISON or RELATIONAL OPERATORS:-
+    We have six relational operators in Java: ==, !=, >, <, >=, <=
+
+== returns true if both the left side and right side are equal
+
+!= returns true if left side is not equal to the right side of operator.
+
+> returns true if left side is greater than right.
+
+< returns true if left side is less than right side.
+
+>= returns true if left side is greater than or equal to right side.
+
+<= returns true if left side is less than or equal to right side.
+
+6.) BITWISE OPERATORS:-
+There are six bitwise Operators: &, |, ^, ~, <<, >>  ---->  Just see them, if required.
+*******************************************************************************************************************************************
+
+ 
+
+
+
+
 
