@@ -22,6 +22,88 @@ BeginnersBook.com
 2.) NO-ARG
 3.) PARAMETRIZED 
 
+NO-ARG CONSTRUCTOR EXAMPLE:-
+
+class Demo
+{
+     public Demo()
+     {
+         System.out.println("This is a no argument constructor");
+     }
+     public static void main(String args[]) {
+    	 new Demo();
+     }
+}
+
+
+PARAMETRIZED CONSTRUCTOR EXAMPLE:-
+
+public class Employee {
+
+   int empId;  
+   String empName;  
+	    
+   //parameterized constructor with two parameters
+   Employee(int id, String name){  
+       this.empId = id;  
+       this.empName = name;  
+   }  
+   void info(){
+        System.out.println("Id: "+empId+" Name: "+empName);
+   }  
+	   
+   public static void main(String args[]){  
+	Employee obj1 = new Employee(10245,"Chaitanya");  
+	Employee obj2 = new Employee(92232,"Negan");  
+	obj1.info();  
+	obj2.info();  
+   }  
+}
+
+Output:
+
+Id: 10245 Name: Chaitanya
+Id: 92232 Name: Negan
+
+
+EXAMPLE:- 02
+
+class Example2
+{
+      private int var;
+      //default constructor
+      public Example2()
+      {
+             this.var = 10;
+      }
+      //parameterized constructor
+      public Example2(int num)
+      {
+             this.var = num;
+      }
+      public int getValue()
+      {
+              return var;
+      }
+      public static void main(String args[])
+      {
+              Example2 obj = new Example2();
+              Example2 obj2 = new Example2(100);
+              System.out.println("var is: "+obj.getValue());
+              System.out.println("var is: "+obj2.getValue());
+      }
+}
+Output:
+
+var is: 10
+var is: 100
+
+NOTE:- WE CAN ALSO GO AHEAD WITH THE CONSTRUCTOR OVERLOADING PROCESS.
+****************************************************************************************************************************************
+
+                                                
+
+                                                      
 
                                                     
 
