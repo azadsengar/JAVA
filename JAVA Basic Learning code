@@ -131,4 +131,51 @@ Output:
 2
 11
 45
-9				
+9	
+***************************************************************************************************************************************
+
+						CODE FOR CONTINUE and BREAK
+					
+public class ContinueExample {
+
+   public static void main(String args[]){
+	for (int j=0; j<=6; j++)
+	{
+           if (j==4)
+           {
+	      continue;
+	   }
+
+           System.out.print(j+" ");
+	}
+   }
+}
+Output:
+
+0 1 2 3 5 6
+
+
+public class BreakExample1 {
+   public static void main(String args[]){
+      int num =0;
+      while(num<=100)
+      {
+          System.out.println("Value of variable is: "+num);
+          if (num==2)
+          {
+             break;
+          }
+          num++;
+      }
+      System.out.println("Out of while-loop");
+  }
+}
+Output:
+
+Value of variable is: 0
+Value of variable is: 1
+Value of variable is: 2
+Out of while-loop
+****************************************************************************************************************************************
+
+						CODE FOR 												
