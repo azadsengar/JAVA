@@ -87,3 +87,48 @@ Its a four digit number
 OUTPUT:
 Case2
 ****************************************************************************************************************************************
+
+					CODE FOR WHILE LOOP
+					
+class WhileLoopExample {
+    public static void main(String args[]){
+         int i=10;
+         while(i>1){
+              System.out.println(i);
+              i--;
+         }
+    }
+}
+
+OUTPUT:
+10
+9
+8
+7
+6
+5
+4
+3
+2
+***************************************************************************************************************************************
+
+					CODE FOR DO-WHILE LOOP
+					
+class DoWhileLoopExample2 {
+    public static void main(String args[]){
+         int arr[]={2,11,45,9};
+         //i starts with 0 as array index starts with 0
+         int i=0;
+         do{
+              System.out.println(arr[i]);
+              i++;
+         }while(i<4);
+    }
+}
+
+
+Output:
+2
+11
+45
+9				
