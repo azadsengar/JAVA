@@ -336,6 +336,15 @@ class Staff
 }
 ****************************************************************************************************************************************
 
+					POLYMORPHISM()
+				
+Polymorphism is the capability of a method to do different things based on the object that it is acting upon. In other words, polymorphism allows you define one interface and have multiple implementations. 
+
+Types of polymorphism:-
+
+1.) RunTime or Dynamic polymorphism(Overriding) ->   This type of polymorphism is generally concerned with the Method Overriding.
+
+2.) CompileTime or Static poltmorphism(Overloading) ->  This type of polymorphism is generally concerned with the Method Overloading.
 						
 						
 									
