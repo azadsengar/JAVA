@@ -345,9 +345,74 @@ Types of polymorphism:-
 1.) RunTime or Dynamic polymorphism(Overriding) ->   This type of polymorphism is generally concerned with the Method Overriding.
 
 2.) CompileTime or Static poltmorphism(Overloading) ->  This type of polymorphism is generally concerned with the Method Overloading.
+
+
 						
+EXAMPLE OF RUNTIME POLYMORPHISM:-
+
+public class Animal{
+   public void sound(){
+      System.out.println("Animal is making a sound");   
+   }
+}
+Horse.java
+
+class Horse extends Animal{
+    @Override
+    public void sound(){
+        System.out.println("Neigh");
+    }
+    public static void main(String args[]){
+    	Animal obj = new Horse();
+    	obj.sound();
+    }
+}
+
+Output:
+
+Neigh
+
+
+EXAMPLE OF COMPILETIME POLYMORPHISM:-
+
+class Overload
+{
+    void demo (int a)
+    {
+       System.out.println ("a: " + a);
+    }
+    void demo (int a, int b)
+    {
+       System.out.println ("a and b: " + a + "," + b);
+    }
+    double demo(double a) {
+       System.out.println("double a: " + a);
+       return a*a;
+    }
+}
+class MethodOverloading
+{
+    public static void main (String args [])
+    {
+        Overload Obj = new Overload();
+        double result;
+        Obj .demo(10);
+        Obj .demo(10, 20);
+        result = Obj .demo(5.5);
+        System.out.println("O/P : " + result);
+    }
+}
+
+Output:
+
+a: 10
+a and b: 10,20
+double a: 5.5
+O/P : 30.25
+****************************************************************************************************************************************
+
 						
-									
+
 
                                                       
 
