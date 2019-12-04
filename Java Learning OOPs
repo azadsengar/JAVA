@@ -101,7 +101,7 @@ var is: 100
 NOTE:- WE CAN ALSO GO AHEAD WITH THE CONSTRUCTOR OVERLOADING PROCESS.
 ****************************************************************************************************************************************
 
-      						INHERITANCE
+      						INHERITANCE (IS-A RELATION)
 					
 The process by which one class acquires the properties(data members) and functionalities(methods) of another class is called inheritance. The aim of inheritance is to provide the reusability of code so that a class has to write only the unique features and rest of the common properties and functionalities can be extended from the another class.
 Child Class:
@@ -223,7 +223,121 @@ Constructor of Child
 Child Method
 Parent Method					
 ****************************************************************************************************************************************
+	
+							AGGREGATION (HAS-A RELATION)
+							
+For example consider two classes Student class and Address class. Every student has an address so the relationship between student and address is a Has-A relationship. But if you consider its vice versa then it would not make any sense as an Address doesn’t need to have a Student necessarily. Lets write this example in a java program.
+Student Has-A Address
 
+class Address
+{
+   int streetNum;
+   String city;
+   String state;
+   String country;
+   Address(int street, String c, String st, String coun)
+   {
+       this.streetNum=street;
+       this.city =c;
+       this.state = st;
+       this.country = coun;
+   }
+}
+class StudentClass
+{
+   int rollNum;
+   String studentName;
+   //Creating HAS-A relationship with Address class
+   Address studentAddr; 
+   StudentClass(int roll, String name, Address addr){
+       this.rollNum=roll;
+       this.studentName=name;
+       this.studentAddr = addr;
+   }
+   public static void main(String args[]){
+       Address ad = new Address(55, "Agra", "UP", "India");
+       StudentClass obj = new StudentClass(123, "Chaitanya", ad);
+       System.out.println(obj.rollNum);
+       System.out.println(obj.studentName);
+       System.out.println(obj.studentAddr.streetNum);
+       System.out.println(obj.studentAddr.city);
+       System.out.println(obj.studentAddr.state);
+       System.out.println(obj.studentAddr.country);
+   }
+}
+
+
+Output:
+
+123
+Chaitanya
+55
+Agra
+UP
+India
+****************************************************************************************************************************************
+
+						AGGREGATION WITH ANOTHER EXAMPLE:-
+						
+Student Has-A Address (Has-a relationship between student and address)
+College Has-A Address (Has-a relationship between college and address)
+Staff Has-A Address (Has-a relationship between staff and address)
+
+So if I have to write this in a program, I would do it like this:
+
+class Address
+{
+   int streetNum;
+   String city;
+   String state;
+   String country;
+   Address(int street, String c, String st, String coun)
+   {
+       this.streetNum=street;
+       this.city =c;
+       this.state = st;
+       this.country = coun;
+   }
+}
+class StudentClass
+{
+   int rollNum;
+   String studentName;
+   //Creating HAS-A relationship with Address class
+   Address studentAddr; 
+   StudentClass(int roll, String name, Address addr){
+       this.rollNum=roll;
+       this.studentName=name;
+       this.studentAddr = addr;
+   }
+   ...
+}
+class College
+{
+   String collegeName;
+   //Creating HAS-A relationship with Address class
+   Address collegeAddr; 
+   College(String name, Address addr){
+       this.collegeName = name;
+       this.collegeAddr = addr;
+   }
+   ...
+}
+class Staff
+{
+   String employeeName;
+   //Creating HAS-A relationship with Address class
+   Address employeeAddr; 
+   Staff(String name, Address addr){
+       this.employeeName = name;
+       this.employeeAddr = addr;
+   }
+   ...
+}
+****************************************************************************************************************************************
+
+						
+						
 									
 
                                                       
