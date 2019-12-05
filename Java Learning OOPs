@@ -416,6 +416,32 @@ apply in method overloading, Just check that
 
 ****************************************************************************************************************************************
 
+						ABSTRACT CLASS
+						
+Abstract class somewhat looks similar to the Run time polymorphism Onlt thing different is that one needs to declare class or method "ABSTRACT". Lets take an example:-
+
+
+
+//abstract parent class
+abstract class Animal{
+   //abstract method
+   public abstract void sound();
+}
+//Dog class extends Animal class
+public class Dog extends Animal{
+
+   public void sound(){
+	System.out.println("Woof");
+   }
+   public static void main(String args[]){
+	Animal obj = new Dog();
+	obj.sound();
+   }
+}
+
+Output:
+
+Woof
 						
 
 
