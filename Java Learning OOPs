@@ -409,6 +409,11 @@ a: 10
 a and b: 10,20
 double a: 5.5
 O/P : 30.25
+
+
+Note:- In Runtime polymorphism if we have used the keyword "STATIC" then we can omit the use of "ANNOTATION" "@Override". The same may 
+apply in method overloading, Just check that
+
 ****************************************************************************************************************************************
 
 						
