@@ -36,4 +36,54 @@ String str2 = Integer.toString(ivar2);
 	
 	long num = Long.parseLong(str);                         {Conversion using parseLong(String) method}
 	long num2 = Long.parseLong(str2);
-	System.out.println(num+num2);	                                      
+	System.out.println(num+num2);	  
+	
+
+NOTE:- It can also be converted using ValueOf() method as in above in the Int case
+***************************************************************************************************************************************
+			
+					Converting String to ArrayList
+					
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Arrays;
+
+public class JavaExample {
+    public static void main(String args[]){
+	String num = "22,33,44,55,66,77";
+	String str[] = num.split(",");
+	List<String> al = new ArrayList<String>();
+	al = Arrays.asList(str);
+	for(String s: al){
+	   System.out.println(s);
+	}
+   }
+}
+
+
+Output:
+
+22
+33
+44
+55
+66
+77
+****************************************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
