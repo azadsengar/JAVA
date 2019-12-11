@@ -4,4 +4,19 @@
 EXAMPLE:-
 String str = "1234";
 int inum = Integer.parseInt(str);
+
+String str="-1234";
+int inum = Integer.parseInt(str);
+
+output:-
+The value of inum would be -1234
 ******************************************************************************************************************************************
+
+                                      Converting String to Int using ValueOf()
+                                        
+EX:-
+String str="1122";
+int inum = Integer.valueOf(str);
+******************************************************************************************************************************************
+
+                                      
