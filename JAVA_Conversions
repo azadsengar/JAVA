@@ -19,4 +19,21 @@ String str="1122";
 int inum = Integer.valueOf(str);
 ******************************************************************************************************************************************
 
+                                      Converting Int to String
                                       
+int ivar = 111;
+String str = String.valueOf(ivar);  
+
+int ivar2 = 200;
+String str2 = Integer.toString(ivar2);
+******************************************************************************************************************************************
+
+                                      Converting String to Long
+
+	String str = "21111";
+	String str2 = "-11111";
+		
+	
+	long num = Long.parseLong(str);                         {Conversion using parseLong(String) method}
+	long num2 = Long.parseLong(str2);
+	System.out.println(num+num2);	                                      
