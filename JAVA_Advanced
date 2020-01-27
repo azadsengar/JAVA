@@ -86,3 +86,66 @@ public class TextFile {
 	}
 
 }
+***************************************************************************************************************************************
+						WRITE THE TEXT FILE USING JAVA
+						
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class FileWriter {
+	
+	public static void textfilewriter() throws IOException{
+		
+		File file = null;
+	    //boolean var = file.createNewFile();
+		
+	
+		FileOutputStream fos = null;
+		String s1 =  "This file is created and written by using JAVA" ;
+		 
+		try{
+			
+			file = new File("C://Users//811716//Desktop//Azad_02.txt");
+			fos = new FileOutputStream(file);
+			
+			 if (!file.exists()) {
+			     file.createNewFile();
+			  }
+
+			  byte[] bytesArray = s1.getBytes();
+			  
+			  fos.write(bytesArray);
+			  fos.flush();
+			  System.out.println("File Written Successfully");
+		       
+			
+			
+		}
+		
+		  catch (IOException ioe) {
+			  ioe.printStackTrace();
+		       } 
+		
+		catch(Exception e){
+			System.out.println(e);
+			
+		}
+		
+		  finally {
+			  try {
+			     if (fos != null) 
+			     {
+				 fos.close();
+			     }
+		          } 
+			  catch (IOException ioe) {
+			     System.out.println("Error in closing the Stream");
+			  }
+		  }
+	}
+
+}
+****************************************************************************************************************************************
+
