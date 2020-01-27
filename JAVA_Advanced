@@ -1,1 +1,88 @@
+       						CREATE A (TEXT)FILE IN JAVA
+						
+import java.io.File;
+import java.io.IOException;
 
+public class TextFile {
+	
+	public static void creattextfile() throws IOException{
+		
+		File f = new File("C://Users//811716//Desktop//Azad.txt");
+		boolean var = f.createNewFile();
+		
+		if(var){
+			System.out.println("File has been succesfully created");
+		}
+		
+		else
+		{
+			System.out.println("File did not created succesfully");
+		}
+		
+	}
+
+}
+****************************************************************************************************************************************
+						READ THE ALREADY CREATED .txt FILE IN JAVA
+
+
+
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public class TextFile {
+	
+	public static void creattextfile() throws IOException{
+		
+		File f = new File("C://Users//811716//Desktop//Azad.txt");
+		
+		FileInputStream fis = null;
+		BufferedInputStream bis = null;
+		
+		try{
+			
+			 fis = new FileInputStream(f);
+			 bis = new BufferedInputStream(fis);
+			
+			while(bis.available() > 0){
+				System.out.print((char)bis.read());
+				
+			}
+			
+		}
+		catch(FileNotFoundException fnfe)
+        {
+            System.out.println("The specified file not found" + fnfe);
+        }
+        catch(IOException ioe)
+        {
+            System.out.println("I/O Exception: " + ioe); 
+        }
+		
+		catch(Exception e){
+			System.out.println(e);
+			
+		}
+		
+		finally
+        {
+            try{
+               if(bis != null && fis!=null)
+               {
+       	          fis.close();
+                  bis.close();
+               }      
+             }catch(IOException ioe)
+              {
+                  System.out.println("Error in InputStream close(): " + ioe);
+              }  
+        }
+            
+        
+		
+	}
+
+}
