@@ -1,1 +1,76 @@
+                                                    JAVA CODE WRITTEN FOR VARIOUS COLLECTIONS
+                                                    
+package JAVACollections;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Vector;
+
+public class Collections {
+
+	public static void arraylist(){
+		
+		ArrayList<String> al = new ArrayList<String>();
+		al.add("AH-64E");
+		al.add("MH-15/N");
+		al.add("Dhruv-IN15A");
+		
+		for(String s : al){
+			System.out.println(s);
+			
+		}
+		
+	}
+	
+	public void array(){
+		
+		
+		
+	}
+	
+	public static void vector(){
+		
+		Vector<String> vec = new Vector<String>();
+		vec.add("Kalvari");
+		vec.add("Karanj");
+		
+		for(int i=0; i<vec.size(); i++){
+			System.out.println(vec.firstElement());
+		}
+		
+	}
+	
+	public static void hashmap(){
+		
+		HashMap<String, Object> hmp = new HashMap<String, Object>();
+		hmp.put("Destroyer", "kolkata");
+		hmp.put("Frigate", "Talwar");
+		hmp.put("Corvette", "Kamorta");
+		hmp.put("Submarine", "Arighat");
+		
+		System.out.println(hmp.size());
+		
+		 for (Entry<String, Object> entry : hmp.entrySet())  
+	            System.out.println("Key = " + entry.getKey() + 
+	                             ", Value = " + entry.getValue());
+		 
+		 System.out.println(hmp.get("Corvette"));
+		
+		
+	}
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+                                                    
