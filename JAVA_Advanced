@@ -166,7 +166,29 @@ public class FileWriter {
 		wb.close();
 	}	
 ****************************************************************************************************************************************
-
+						WRITE DATA IN EXCEL
+						
+	public static  void excelwritefile() throws IOException{
+	
+		System.out.println("Write in Excel Begins");
+		File f = new File("C://Users//811716//Desktop//Azad_01.xlsx");
+		FileOutputStream fos = new FileOutputStream(f);
+		XSSFWorkbook wb = new XSSFWorkbook();
+		XSSFSheet sh1 = wb.createSheet("vasudev");
+		sh1.createRow(6).createCell(7).setCellValue("This Code has been written by Power Man");
+				
+				
+				
+		wb.write(fos);
+		fos.close();
+		wb.close();
+		
+		System.out.println("Writing in Excel Accomplished");
+		
+		
+	
+	}
+***************************************************************************************************************************************
 					
 				
 
