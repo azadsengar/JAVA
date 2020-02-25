@@ -136,7 +136,7 @@ public class FileWriter {
 		  finally {
 			  try {
 			     if (fos != null) 
-			     {
+			   
 				 fos.close();
 			     }
 		          } 
@@ -148,4 +148,38 @@ public class FileWriter {
 
 }
 ****************************************************************************************************************************************
+						READ DATA IN EXCEL
+						
+	public static  void excelutilities() throws IOException{
+		
+		System.out.println("Pass");
+		File f = new File("C://Users//811716//Desktop//Azad.xlsx");
+		FileInputStream fis = new FileInputStream(f);
+		XSSFWorkbook wb = new XSSFWorkbook(fis);
+		XSSFSheet sh1 = wb.getSheetAt(0);
+		
+		String s1 = sh1.getRow(1).getCell(1).getStringCellValue();
+		System.out.println(s1);
+		
+		
+		
+		wb.close();
+	}	
+****************************************************************************************************************************************
+
+					
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
 
