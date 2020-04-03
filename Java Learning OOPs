@@ -22,6 +22,8 @@ BeginnersBook.com
 2.) NO-ARG
 3.) PARAMETRIZED 
 
+NOTE: In constructor we cannot give return type, but Access modifier can be given
+
 NO-ARG CONSTRUCTOR EXAMPLE:-
 
 class Demo
