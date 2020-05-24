@@ -76,8 +76,8 @@ public class Collections {
 	
 	public static void treemap(){
 		
-		TreeMap<Integer,String> tmap = new TreeMap<Integer,String>();
-		tmap.put(1, "Data1");
+	    TreeMap<Integer,String> tmap = new TreeMap<Integer,String>();
+	    tmap.put(1, "Data1");
 	    tmap.put(23, "Data2");
 	    tmap.put(70, "Data3");
 	    tmap.put(4, "Data4");
@@ -109,6 +109,40 @@ public class Collections {
 	      
 	}
 }
+****************************************************************************************************************************************
+							Collections
+Collection : Root interface with basic methods like add(), remove(), 
+             contains(), isEmpty(), addAll(), ... etc.
+ 
+Set : Doesn't allow duplicates. Example implementations of Set 
+      interface are HashSet (Hashing based) and TreeSet (balanced
+      BST based). Note that TreeSet implements SortedSet.
+
+List : Can contain duplicates and elements are ordered. Example
+       implementations are LinkedList (linked list based) and
+       ArrayList (dynamic array based)
+
+Queue : Typically order elements in FIFO order except exceptions
+        like PriorityQueue.  
+
+Deque : Elements can be inserted and removed at both ends. Allows
+        both LIFO and FIFO. 
+
+Map : Contains Key value pairs. Doesn't allow duplicates.  Example
+      implementation are HashMap and TreeMap. 
+      TreeMap implements SortedMap.
+****************************************************************************************************************************************
+							
+         Collection                Map
+         /     /    \      \            |
+        /      /      \     \           |
+     Set    List    Queue  Dequeue   SortedMap
+     /
+    /
+ SortedSet 
+            Core Interfaces in Collections
+
+Note that this diagram only shows core interfaces
 
 
 
