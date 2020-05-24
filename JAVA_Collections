@@ -111,6 +111,7 @@ public class Collections {
 }
 ****************************************************************************************************************************************
 							Collections
+							
 Collection : Root interface with basic methods like add(), remove(), 
              contains(), isEmpty(), addAll(), ... etc.
  
@@ -144,10 +145,29 @@ Map : Contains Key value pairs. Doesn't allow duplicates.  Example
 
 Note that this diagram only shows core interfaces
 ****************************************************************************************************************************************
+							ARRAY_LIST
+							
+Arraylist class implements List interface and it is based on an Array data structure.
+It is widely used because of the functionality and flexibility it offers. Most of the developers choose Arraylist over Array as 
+it’s a very good alternative of traditional java arrays. ArrayList is a resizable-array implementation of the List interface. 
+It implements all optional list operations, and permits all elements, including null.
+****************************************************************************************************************************************
+							LINKED_LIST
+							
+Similar to arrays in Java, LinkedList is a linear data structure. However LinkedList elements are not stored in contiguous locations 
+like arrays, they are linked with each other using pointers. Each element of the LinkedList has the reference(address/pointer) to the 
+next element of the LinkedList.
+****************************************************************************************************************************************
+							VECTOR
+							
+Vector implements List Interface. Like ArrayList it also maintains insertion order but it is rarely used in non-thread environment as it is synchronized and due to which it gives poor performance in searching, adding, delete and update of its elements.
 
-
-
-
+SYNTAX:
+Vector object= new vector(int initialcapacity, capacityIncrement)
+****************************************************************************************************************************************
+							ITERATOR
+							
+Iterator is used for iterating (looping) various collection classes such as HashMap, ArrayList, LinkedList etc. Iterator is used for iterating (looping) various collection classes such as HashMap, ArrayList, LinkedList etc. 
 
 
 
