@@ -445,7 +445,12 @@ Output:
 
 Woof
 
+Note 1: There can be some scenarios where it is difficult to implement all the methods in the base class. In such scenarios one can define the base class as an abstract class which signifies that this base class is a special kind of class which is not complete on its own.
+A class derived from the abstract base class must implement those methods that are not implemented(means they are abstract) in the abstract class.
+
 Note 2: Abstract class cannot be instantiated which means you cannot create the object of it. To use this class, you need to create another class that extends this this class and provides the implementation of abstract methods, then you can use the object of that child class to call non-abstract methods of parent class as well as implemented methods(those that were abstract in parent but implemented in child class).
+
+Note 3: If a child does not implement all the abstract methods of parent class(the abstract class), then the child class must need to be declared abstract.
 
 ****************************************************************************************************************************************
 
