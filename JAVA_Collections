@@ -179,6 +179,9 @@ alist.add("Steve");					-    {Addng the elements to arrayList}
 alist.set(0, "Lucy");					-    {Changing element}
 alist.remove("Steve");					-    {Removing element}
 alist.size()						-    {Size of arraylist}
+alist.add(1, "Justin");					-    {Adding element at specified Index}
+alist.remove("Chaitanya");				-    {Removes "Chaitanya"}
+alist.remove(1);  					-    {Removes second element}
 
 
 
