@@ -168,7 +168,14 @@ Vector object= new vector(int initialcapacity, capacityIncrement)
 							ITERATOR
 							
 Iterator is used for iterating (looping) various collection classes such as HashMap, ArrayList, LinkedList etc. Iterator is used for iterating (looping) various collection classes such as HashMap, ArrayList, LinkedList etc. 
+****************************************************************************************************************************************
 
+							Collections in detail
+							
+1.) Array List:-
+
+ArrayList<String> alist=new ArrayList<String>();        -    {Creating the arrayList}
+alist.add("Steve");					-    {Addng the elements to arrayList}
 
 
 
