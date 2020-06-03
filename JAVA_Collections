@@ -176,12 +176,16 @@ Iterator is used for iterating (looping) various collection classes such as Hash
 
 ArrayList<String> alist=new ArrayList<String>();        -    {Creating the arrayList}
 alist.add("Steve");					-    {Addng the elements to arrayList}
+alist.add(1,"Steve");					-    {Addng the elements at specified Index position}
 alist.set(0, "Lucy");					-    {Changing element}
 alist.remove("Steve");					-    {Removing element}
 alist.size()						-    {Size of arraylist}
 alist.add(1, "Justin");					-    {Adding element at specified Index}
 alist.remove("Chaitanya");				-    {Removes "Chaitanya"}
 alist.remove(1);  					-    {Removes second element}
+Collections.sort(alist);                                -    {Sorts the arralList}
+
+
 
 
 
