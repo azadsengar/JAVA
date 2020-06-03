@@ -188,6 +188,17 @@ Collections.reverse(alist);                             -    {Reverses the arral
 alist.clear();						-    {Clears the List}
 
 
+2.) Hashmap:-
+
+HashMap<Integer, String> hmap = new HashMap<Integer, String>();              -		{Creates and initializes HashMap}
+hmap.put(0, "Arihant");							     -		{Inserts key value mapping into the map}
+hmap.keySet();								     -		{returns the Set of the keys}
+hmap.values();								     -		{returns a collection of values}		
+hmap.get('Key');							     -		{returns the value for the specified key}
+hmap.remove('Key');							     -		{removes the key-value pair for specified key}
+hmap.Putall(hmap2);							     -		{ Copies all the elements of a map to the another specified map}
+
+
 
 
 
