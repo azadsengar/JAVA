@@ -184,6 +184,10 @@ alist.add(1, "Justin");					-    {Adding element at specified Index}
 alist.remove("Chaitanya");				-    {Removes "Chaitanya"}
 alist.remove(1);  					-    {Removes second element}
 Collections.sort(alist);                                -    {Sorts the arralList}
+Collections.reverse(alist);                             -    {Reverses the arralList}
+alist.clear();						-    {Clears the List}
+
+
 
 
 
