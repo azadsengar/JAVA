@@ -190,6 +190,8 @@ alist.clear();						-    {Clears the List}
 
 2.) Hashmap:-
 
+HashMap is a Map based collection class that is used for storing Key & value pairs, it is denoted as HashMap<Key, Value> or HashMap<K, V>. This class makes no guarantees as to the order of the map. It is similar to the Hashtable class except that it is unsynchronized and permits nulls(null values and null key).
+
 HashMap<Integer, String> hmap = new HashMap<Integer, String>();              -		{Creates and initializes HashMap}
 hmap.put(0, "Arihant");							     -		{Inserts key value mapping into the map}
 hmap.keySet();								     -		{returns the Set of the keys}
