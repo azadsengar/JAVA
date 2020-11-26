@@ -1,4 +1,28 @@
-                                                 CODE FOR CONSTRUCTOR PROGRAM
+    						Important method and Constructor calling Key-words
+
+1.) New 
+2.) Super
+3.) this
+						
+1.) New - 
+    Syntax:  New Constructorname()
+    Description: New Keyword is generaly used when we call a construcor from the extended or Inherited class Constructor. 
+    
+2.) Super - 						
+    Syntax:  Super MethodName()
+    Description: New Keyword is generaly used when we call a method in Inherited class of same Method name. Eg: In Run-time Polymorphism where we have method overriding.
+    
+2.) this - 						
+    Syntax:  this.MethodName()
+    Description: this keyword is used when we are calling one or many methods in multiple methods of inherited class where we cannot initialize the parent class in every method     and call them.
+						
+						
+						
+						
+						
+						
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------						
+						CODE FOR CONSTRUCTOR PROGRAM
                                         
 public class Hello {
    String name;
