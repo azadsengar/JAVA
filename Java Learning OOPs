@@ -4,13 +4,16 @@
 2.) Super
 3.) this
 						
-1.) New - 
-    Syntax:  New Constructorname()
-    Description: New Keyword is generaly used when we call a construcor from the extended or Inherited class Constructor. 
+1.) new - 
+    Syntax:  new Constructorname()
+    Description: New Keyword is generaly used when we initioalize a class for object.
     
-2.) Super - 						
-    Syntax:  Super MethodName()
-    Description: New Keyword is generaly used when we call a method in Inherited class of same Method name. Eg: In Run-time Polymorphism where we have method overriding.
+2.) super - 						
+    Syntax1 for method calling:  super.MethodName()
+    Description: The above syntax is used in the overriding method for which it is overriding Eg: In Run-time Polymorphism where we have method overriding.
+    
+    Syntax2 for Constructor calling:  super(), super(int, String), etc.
+    Description: The above syntax is used in the constructor of the child class if you are calling the constructor of the parent class and it should be the first line.
     
 2.) this - 						
     Syntax:  this.MethodName()
