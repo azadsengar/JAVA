@@ -1,1 +1,176 @@
 
+
+public class SMEBOT extends CustomScript {
+
+
+	public void executeScript(TestAction testAction, AdditionalParams additionalParams) throws AutomationException {
+
+//		logger.info("This is CustomeScript' action call as Claimant Name");
+//		String claimantName = driver.findElement(By.xpath("//table[@id='claim-metadata']/tbody/tr[4]/td[1]/span")).getText();
+//		additionalParams.getExtentTest().info("This is CustomeScript' action call as Claimant Name : "+ claimantName);
+
+	} 
+	
+	
+	public  void DemocranceLoginPageVerification(TestAction testAction, AdditionalParams additionalParams) throws AutomationException, InterruptedException{
+		
+		//driver = new ChromeDriver();		
+		try {
+			  (new WebDriverWait(driver,30)).until(ExpectedConditions.
+                and(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@name='username']"))));   
+			  WebElement Username = driver.findElement(By.xpath("//input[@name='username']"));
+			  Username.sendKeys("azad.sengar@aig.com");	  
+			
+		  
+		  	  (new WebDriverWait(driver,30)).until(ExpectedConditions.
+	                and(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@name='password']"))));
+			  driver.findElement(By.xpath("//input[@name='password']")).sendKeys("Test12345!");			  
+			  driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+			  
+			  
+		      driver.findElement(By.xpath("//button[contains(text(),'Log In')]")).click();	
+		      
+		      System.out.println("Login page validated successfully");
+		      
+		      additionalParams.getExtentTest().log(Status.INFO, "Login page validated successfully");
+		}
+		
+	catch(Exception e) {
+		
+		e.printStackTrace();
+	}		
+			 
+	}
+	
+	
+	
+	public void DemocranceHomePageValidation(TestAction testAction, AdditionalParams additionalParams) throws AutomationException, InterruptedException{
+		
+		try {
+			
+			//Thread.sleep(10000);
+			driver.manage().timeouts().implicitlyWait(12, TimeUnit.SECONDS);
+			driver.navigate().refresh();
+			
+			
+			
+			additionalParams.getExtentTest().log(Status.INFO, "Home page validated successfully");
+			
+		}
+		
+		catch(Exception e) {
+			
+			e.printStackTrace();
+		} 
+		
+		
+	}
+	
+	
+	
+	
+	public void DemocranceReportExtraction(TestAction testAction, AdditionalParams additionalParams) throws AutomationException, InterruptedException{
+	
+	
+		try {
+			////a[@role='button']/span[contains(text(),'20')]
+			
+			  DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd");
+			   LocalDateTime now = LocalDateTime.now();  
+			   String date = dtf.format(now);
+			   int date1 = Integer.parseInt(date);
+			   date1-=1;
+			   
+			   String date2 = Integer.toString(date1);
+			   
+			 (new WebDriverWait(driver,30)).until(ExpectedConditions.
+		                and(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[contains(text(),' Reports')]"))));
+			driver.findElement(By.linkText("Reports")).click();
+			
+			driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+			driver.findElement(By.xpath("//input[@placeholder='Please select one']")).sendKeys("Sme Production Report");
+			
+			driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+			driver.findElement(By.xpath("//div[contains(text(),'SME')]")).click();
+			
+			
+			(new WebDriverWait(driver,30)).until(ExpectedConditions.
+	                and(ExpectedConditions.presenceOfElementLocated(By.xpath("(//input[@placeholder='dd/mm/yyyy'])[1]"))));
+			driver.findElement(By.xpath("(//input[@placeholder='dd/mm/yyyy'])[1]")).click();
+
+			
+			/*
+			 * driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+			 * driver.findElement(By.xpath("//header[@class='datepicker-header']//i")).click
+			 * ();
+			 */
+			
+			driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+			driver.findElement(By.xpath("//a[@role='button']/span[contains(text(),"+date2+")]")).click();
+			
+			
+			(new WebDriverWait(driver,30)).until(ExpectedConditions.
+	                and(ExpectedConditions.presenceOfElementLocated(By.xpath("(//input[@placeholder='dd/mm/yyyy'])[2]"))));
+			driver.findElement(By.xpath("(//input[@placeholder='dd/mm/yyyy'])[2]")).click();
+			
+			
+			driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+			driver.findElement(By.xpath("(//a[@role='button']/span[contains(text(),"+date2+")])[2]")).click();
+			
+			
+			
+			
+			additionalParams.getExtentTest().log(Status.INFO, "Report Extraction page validated successfully");
+			
+			
+			
+		}
+		
+	catch(Exception e) {
+			
+			e.printStackTrace();
+		} 
+		
+		
+		
+	}
+	
+	
+	
+	
+	public void DemocranceReportDownloading(TestAction testAction, AdditionalParams additionalParams) throws AutomationException, InterruptedException{
+		
+		
+		try {
+			
+			
+			////a[contains(text(),'Generate')]			
+			Thread.sleep(4000);
+			WebElement gnbtn = driver.findElement(By.linkText("Generate"));
+			
+			Actions action = new Actions(driver);
+			action.moveToElement(gnbtn).click().build().perform();
+			
+			
+			additionalParams.getExtentTest().log(Status.INFO, "Report is downloaded successfully");
+			
+			
+			
+		}
+		
+	catch(Exception e) {
+			
+			e.printStackTrace();
+		} 
+		
+		
+		
+	}
+	
+	
+	
+	 
+	
+	
+
+}
